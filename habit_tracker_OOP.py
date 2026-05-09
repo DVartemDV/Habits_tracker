@@ -40,7 +40,6 @@ class Habit_tracker:
             font=('', 20)
         ).place(x=200,y=200)
     
-    
     def append_habit(self, name, quantity):
         cursor.execute('''SELECT name FROM habits WHERE name = ?''', (name,))
         if cursor.fetchone():
@@ -52,7 +51,6 @@ class Habit_tracker:
         conn.commit()
         return True, f'Привычка {name} {quantity} раз была добавлена.'
         
-    
     def del_habit(self, habit_id):                        # func удаление привычки   
         cursor.execute('''SELECT name, id FROM habits WHERE id = ?''', (habit_id,))
         habit = cursor.fetchone()
@@ -134,18 +132,8 @@ class Habit_tracker:
         label_habit_id_text = Label(win_del, text='Введите id привычки', font=('', 17))
         label_habit_id_text.place(x=1,y=100)
 
-        
-
-
-
-
-        
     def run(self):
         self.root.mainloop()
-
-
-
-
 
 main_win = Habit_tracker()
 main_win.run()
