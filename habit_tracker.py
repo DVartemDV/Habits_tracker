@@ -159,7 +159,4 @@ list_habit_btn.place(x=200,y=200)
 Label_title_txt.place(x=230, y=1)
 
 
-
-
-
 root.mainloop() # Работа программы
