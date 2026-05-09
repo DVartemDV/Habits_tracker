@@ -21,6 +21,7 @@ cursor.execute('''
 ''')
 conn.commit()
 
+
 class Habit_tracker:
     def __init__(self):
         self.root = Tk()
